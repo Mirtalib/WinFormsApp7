@@ -5,7 +5,6 @@ namespace WinFormsApp7.Forms
 {
     public partial class Uc_Student : UserControl
     {
-        FormMain s = new FormMain();
         public Uc_Student(Student student)
         {
             InitializeComponent();
@@ -20,6 +19,7 @@ namespace WinFormsApp7.Forms
             lblNo.Text = student.Number.ToString();
             lblFullname.Text = student?.FullName?.ToString();
             lblLAstIn.Text = student?.LastIn.ToShortDateString();
+
         }
 
         private void rbtn1_CheckedChanged(object sender, EventArgs e)
@@ -47,8 +47,12 @@ namespace WinFormsApp7.Forms
                 btnDiamondCancel.Enabled = false;
                 txtBoxComment.Text = null;
                 txtBoxComment.Visible = false;
+                btnDiamond3.BackColor = Color.White;
+                btnDiamond2.BackColor = Color.White;
+                btnDiamond1.BackColor = Color.White;
             }
         }
+
 
         private void btnComent_Click(object sender, EventArgs e)
         {
@@ -67,18 +71,23 @@ namespace WinFormsApp7.Forms
 
         private void btnDiamond3_Click(object sender, EventArgs e)
         {
-            int size = Convert.ToInt32(s.lblKrSize.Text);
-            
-
-            if (size - 3 > 0)
-            {
-                size -= 3;
                 btnDiamond1.BackColor = Color.Blue;
                 btnDiamond2.BackColor = Color.Blue;
                 btnDiamond3.BackColor = Color.Blue;
-                s.lblKrSize.Text = $"{size}";
-            }
         }
 
+        private void btnDiamond2_Click(object sender, EventArgs e)
+        {
+            btnDiamond3.BackColor =Color.White;
+            btnDiamond2.BackColor = Color.Blue;
+            btnDiamond1.BackColor = Color.Blue;
+        }
+
+        private void btnDiamond1_Click(object sender, EventArgs e)
+        {
+            btnDiamond3.BackColor = Color.White;
+            btnDiamond2.BackColor = Color.White;
+            btnDiamond1.BackColor = Color.Blue;
+        }
     }
 }

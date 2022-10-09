@@ -1,4 +1,5 @@
-﻿using WinFormsApp7.Forms;
+﻿using Newtonsoft.Json;
+using WinFormsApp7.Forms;
 using WinFormsApp7.Reposidory;
 
 namespace WinFormsApp7
@@ -59,7 +60,6 @@ namespace WinFormsApp7
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
             if (!string.IsNullOrWhiteSpace(txtMaterial.Text))
             {
 
@@ -81,7 +81,7 @@ namespace WinFormsApp7
             }
             else
             {
-                MessageBox.Show("Enter Text");
+                MessageBox.Show("Dersin Adini Qeyd Edin");
             }
         }
 
@@ -108,7 +108,12 @@ namespace WinFormsApp7
             btnSave.Visible = false;
             btnCancel.Visible = false;
             btnEdit.Visible = true;
-            lblLessonName.Text=txtMaterial.Text;
+            if (!string.IsNullOrWhiteSpace(lblLessonName.Text))
+            { 
+                txtMaterial.Text = lblLessonName.Text;
+            }
         }
+
+        
     }
 }

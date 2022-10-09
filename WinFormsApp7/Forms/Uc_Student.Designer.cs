@@ -350,6 +350,7 @@
             this.btnDiamond2.TabIndex = 0;
             this.btnDiamond2.Text = "*";
             this.btnDiamond2.UseVisualStyleBackColor = true;
+            this.btnDiamond2.Click += new System.EventHandler(this.btnDiamond2_Click);
             // 
             // btnDiamond1
             // 
@@ -365,6 +366,7 @@
             this.btnDiamond1.TabIndex = 0;
             this.btnDiamond1.Text = "*";
             this.btnDiamond1.UseVisualStyleBackColor = true;
+            this.btnDiamond1.Click += new System.EventHandler(this.btnDiamond1_Click);
             // 
             // panel7
             // 
@@ -448,12 +450,10 @@
         #endregion
 
         private TableLayoutPanel tableLayoutPanel;
-        private Label lbl_border_b;
         private Panel panel1;
         private Panel panel2;
         private Panel panel4;
         private Panel panel5;
-        private Panel panel6;
         private Panel panel7;
         private PictureBox pictureBox1;
         private Label lblFullname;
@@ -461,10 +461,6 @@
         private Label lblLAstIn;
         private ComboBox comboBoxLbrt;
         private ComboBox comboBox2;
-        private Button btnDiamondCancel;
-        private Button btnDiamond2;
-        private Button btnDiamond1;
-        private Button btnDiamond3;
         private Button btnComent;
         private Panel panel3;
         public RadioButton rbtn3;
@@ -472,5 +468,11 @@
         public RadioButton rbtn1;
         private TextBox txtBoxComment;
         private Button btnSaveComment;
+        public Label lbl_border_b;
+        public Panel panel6;
+        public Button btnDiamondCancel;
+        public Button btnDiamond2;
+        public Button btnDiamond1;
+        public Button btnDiamond3;
     }
 }
