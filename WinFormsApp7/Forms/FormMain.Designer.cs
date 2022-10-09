@@ -53,7 +53,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.lblKrSize = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -113,7 +112,7 @@
             // lblLogbook
             // 
             this.lblLogbook.AutoSize = true;
-            this.lblLogbook.Location = new System.Drawing.Point(771, 18);
+            this.lblLogbook.Location = new System.Drawing.Point(780, 15);
             this.lblLogbook.Name = "lblLogbook";
             this.lblLogbook.Size = new System.Drawing.Size(68, 20);
             this.lblLogbook.TabIndex = 0;
@@ -173,11 +172,13 @@
             // 
             // btnSave
             // 
+            this.btnSave.BackgroundImage = global::WinFormsApp7.Properties.Resources.save;
+            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Location = new System.Drawing.Point(636, 15);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(108, 29);
+            this.btnSave.Size = new System.Drawing.Size(33, 29);
             this.btnSave.TabIndex = 5;
-            this.btnSave.Text = "Yadda Saxla";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Visible = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -193,11 +194,13 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.BackgroundImage = global::WinFormsApp7.Properties.Resources.close;
+            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Location = new System.Drawing.Point(636, 50);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(108, 29);
+            this.btnCancel.Size = new System.Drawing.Size(33, 29);
             this.btnCancel.TabIndex = 6;
-            this.btnCancel.Text = "Imtina";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Visible = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -332,7 +335,6 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.lblKrSize);
             this.panel7.Controls.Add(this.label5);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(1193, 3);
@@ -340,19 +342,10 @@
             this.panel7.Size = new System.Drawing.Size(180, 86);
             this.panel7.TabIndex = 5;
             // 
-            // lblKrSize
-            // 
-            this.lblKrSize.AutoSize = true;
-            this.lblKrSize.Location = new System.Drawing.Point(102, 33);
-            this.lblKrSize.Name = "lblKrSize";
-            this.lblKrSize.Size = new System.Drawing.Size(17, 20);
-            this.lblKrSize.TabIndex = 1;
-            this.lblKrSize.Text = "5";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 33);
+            this.label5.Location = new System.Drawing.Point(57, 33);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 20);
             this.label5.TabIndex = 0;
@@ -378,7 +371,7 @@
             // 
             // pnlStdentContent
             // 
-            this.pnlStdentContent.BackColor = System.Drawing.SystemColors.Info;
+            this.pnlStdentContent.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnlStdentContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlStdentContent.Location = new System.Drawing.Point(8, 234);
             this.pnlStdentContent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -449,7 +442,6 @@
         private Label label6;
         public TableLayoutPanel tableLayoutPanel1;
         private RadioButton rbtnAllTrue;
-        public Label lblKrSize;
         private Label lblLessonName;
         private Label lblLesson;
         private Panel pnlStdentContent;

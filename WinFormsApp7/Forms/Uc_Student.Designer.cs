@@ -49,8 +49,11 @@
             this.btnDiamond2 = new System.Windows.Forms.Button();
             this.btnDiamond1 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.tblPnlComment = new System.Windows.Forms.TableLayoutPanel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.txtBoxComment = new System.Windows.Forms.RichTextBox();
+            this.btnClose = new System.Windows.Forms.Button();
             this.btnSaveComment = new System.Windows.Forms.Button();
-            this.txtBoxComment = new System.Windows.Forms.TextBox();
             this.btnComent = new System.Windows.Forms.Button();
             this.lbl_border_b = new System.Windows.Forms.Label();
             this.tableLayoutPanel.SuspendLayout();
@@ -62,6 +65,8 @@
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.tblPnlComment.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel
@@ -311,29 +316,36 @@
             this.btnDiamondCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDiamondCancel.BackColor = System.Drawing.Color.IndianRed;
+            this.btnDiamondCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnDiamondCancel.BackgroundImage = global::WinFormsApp7.Properties.Resources.close;
+            this.btnDiamondCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDiamondCancel.Enabled = false;
-            this.btnDiamondCancel.Location = new System.Drawing.Point(138, 27);
+            this.btnDiamondCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDiamondCancel.Location = new System.Drawing.Point(134, 27);
             this.btnDiamondCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDiamondCancel.Name = "btnDiamondCancel";
-            this.btnDiamondCancel.Size = new System.Drawing.Size(25, 25);
+            this.btnDiamondCancel.Size = new System.Drawing.Size(25, 24);
             this.btnDiamondCancel.TabIndex = 0;
             this.btnDiamondCancel.Text = "*";
             this.btnDiamondCancel.UseVisualStyleBackColor = false;
+            this.btnDiamondCancel.Click += new System.EventHandler(this.btnDiamondCancel_Click);
             // 
             // btnDiamond3
             // 
             this.btnDiamond3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDiamond3.BackColor = System.Drawing.Color.Transparent;
+            this.btnDiamond3.BackgroundImage = global::WinFormsApp7.Properties.Resources.diamond2;
             this.btnDiamond3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDiamond3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDiamond3.Enabled = false;
-            this.btnDiamond3.Location = new System.Drawing.Point(87, 25);
+            this.btnDiamond3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDiamond3.Location = new System.Drawing.Point(88, 27);
             this.btnDiamond3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDiamond3.Name = "btnDiamond3";
             this.btnDiamond3.Size = new System.Drawing.Size(25, 24);
             this.btnDiamond3.TabIndex = 0;
-            this.btnDiamond3.Text = "*";
             this.btnDiamond3.UseVisualStyleBackColor = true;
             this.btnDiamond3.Click += new System.EventHandler(this.btnDiamond3_Click);
             // 
@@ -342,13 +354,15 @@
             this.btnDiamond2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDiamond2.BackgroundImage = global::WinFormsApp7.Properties.Resources.diamond2;
+            this.btnDiamond2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDiamond2.Enabled = false;
-            this.btnDiamond2.Location = new System.Drawing.Point(55, 25);
+            this.btnDiamond2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDiamond2.Location = new System.Drawing.Point(56, 27);
             this.btnDiamond2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDiamond2.Name = "btnDiamond2";
             this.btnDiamond2.Size = new System.Drawing.Size(25, 25);
             this.btnDiamond2.TabIndex = 0;
-            this.btnDiamond2.Text = "*";
             this.btnDiamond2.UseVisualStyleBackColor = true;
             this.btnDiamond2.Click += new System.EventHandler(this.btnDiamond2_Click);
             // 
@@ -357,21 +371,23 @@
             this.btnDiamond1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDiamond1.BackgroundImage = global::WinFormsApp7.Properties.Resources.diamond2;
             this.btnDiamond1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDiamond1.Enabled = false;
-            this.btnDiamond1.Location = new System.Drawing.Point(24, 25);
+            this.btnDiamond1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDiamond1.Location = new System.Drawing.Point(25, 27);
             this.btnDiamond1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDiamond1.Name = "btnDiamond1";
             this.btnDiamond1.Size = new System.Drawing.Size(25, 25);
             this.btnDiamond1.TabIndex = 0;
-            this.btnDiamond1.Text = "*";
             this.btnDiamond1.UseVisualStyleBackColor = true;
             this.btnDiamond1.Click += new System.EventHandler(this.btnDiamond1_Click);
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.tblPnlComment);
+            this.panel7.Controls.Add(this.btnClose);
             this.panel7.Controls.Add(this.btnSaveComment);
-            this.panel7.Controls.Add(this.txtBoxComment);
             this.panel7.Controls.Add(this.btnComent);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(1368, 0);
@@ -380,34 +396,75 @@
             this.panel7.Size = new System.Drawing.Size(336, 79);
             this.panel7.TabIndex = 6;
             // 
+            // tblPnlComment
+            // 
+            this.tblPnlComment.ColumnCount = 1;
+            this.tblPnlComment.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblPnlComment.Controls.Add(this.panel8, 0, 0);
+            this.tblPnlComment.Location = new System.Drawing.Point(86, 3);
+            this.tblPnlComment.Name = "tblPnlComment";
+            this.tblPnlComment.RowCount = 1;
+            this.tblPnlComment.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblPnlComment.Size = new System.Drawing.Size(126, 69);
+            this.tblPnlComment.TabIndex = 4;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.txtBoxComment);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(3, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(120, 63);
+            this.panel8.TabIndex = 0;
+            // 
+            // txtBoxComment
+            // 
+            this.txtBoxComment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtBoxComment.Location = new System.Drawing.Point(0, 0);
+            this.txtBoxComment.Name = "txtBoxComment";
+            this.txtBoxComment.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.txtBoxComment.Size = new System.Drawing.Size(120, 63);
+            this.txtBoxComment.TabIndex = 4;
+            this.txtBoxComment.Text = "";
+            this.txtBoxComment.Visible = false;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackgroundImage = global::WinFormsApp7.Properties.Resources.close;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(249, 40);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(35, 29);
+            this.btnClose.TabIndex = 3;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Visible = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // btnSaveComment
             // 
-            this.btnSaveComment.Location = new System.Drawing.Point(264, 25);
+            this.btnSaveComment.BackgroundImage = global::WinFormsApp7.Properties.Resources.save;
+            this.btnSaveComment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSaveComment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveComment.Location = new System.Drawing.Point(249, 5);
             this.btnSaveComment.Name = "btnSaveComment";
-            this.btnSaveComment.Size = new System.Drawing.Size(69, 29);
+            this.btnSaveComment.Size = new System.Drawing.Size(35, 29);
             this.btnSaveComment.TabIndex = 2;
-            this.btnSaveComment.Text = "Save";
             this.btnSaveComment.UseVisualStyleBackColor = true;
             this.btnSaveComment.Visible = false;
             this.btnSaveComment.Click += new System.EventHandler(this.btnSaveComment_Click);
             // 
-            // txtBoxComment
-            // 
-            this.txtBoxComment.Location = new System.Drawing.Point(118, 26);
-            this.txtBoxComment.Name = "txtBoxComment";
-            this.txtBoxComment.Size = new System.Drawing.Size(125, 27);
-            this.txtBoxComment.TabIndex = 1;
-            this.txtBoxComment.Visible = false;
-            // 
             // btnComent
             // 
+            this.btnComent.BackgroundImage = global::WinFormsApp7.Properties.Resources.Comment;
+            this.btnComent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnComent.Enabled = false;
-            this.btnComent.Location = new System.Drawing.Point(3, 24);
+            this.btnComent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnComent.Location = new System.Drawing.Point(22, 24);
             this.btnComent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnComent.Name = "btnComent";
-            this.btnComent.Size = new System.Drawing.Size(86, 31);
+            this.btnComent.Size = new System.Drawing.Size(45, 31);
             this.btnComent.TabIndex = 0;
-            this.btnComent.Text = "Comment";
             this.btnComent.UseVisualStyleBackColor = true;
             this.btnComent.Click += new System.EventHandler(this.btnComent_Click);
             // 
@@ -442,7 +499,8 @@
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            this.tblPnlComment.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -466,7 +524,6 @@
         public RadioButton rbtn3;
         public RadioButton rbtn2;
         public RadioButton rbtn1;
-        private TextBox txtBoxComment;
         private Button btnSaveComment;
         public Label lbl_border_b;
         public Panel panel6;
@@ -474,5 +531,9 @@
         public Button btnDiamond2;
         public Button btnDiamond1;
         public Button btnDiamond3;
+        private Button btnClose;
+        private RichTextBox txtBoxComment;
+        private TableLayoutPanel tblPnlComment;
+        private Panel panel8;
     }
 }

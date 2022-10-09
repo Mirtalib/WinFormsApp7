@@ -1,5 +1,6 @@
 ﻿using WinFormsApp7.MOdels;
 using WinFormsApp7;
+using WinFormsApp7.Properties;
 
 namespace WinFormsApp7.Forms
 {
@@ -47,15 +48,16 @@ namespace WinFormsApp7.Forms
                 btnDiamondCancel.Enabled = false;
                 txtBoxComment.Text = null;
                 txtBoxComment.Visible = false;
-                btnDiamond3.BackColor = Color.White;
-                btnDiamond2.BackColor = Color.White;
-                btnDiamond1.BackColor = Color.White;
+                btnDiamond1.BackgroundImage = Resources.diamond2;
+                btnDiamond2.BackgroundImage = Resources.diamond2;
+                btnDiamond3.BackgroundImage = Resources.diamond2;
             }
         }
 
 
         private void btnComent_Click(object sender, EventArgs e)
         {
+            btnClose.Visible = true;
             btnComent.Visible = false;
             txtBoxComment.Visible = true;
             txtBoxComment.Enabled = true;
@@ -64,30 +66,59 @@ namespace WinFormsApp7.Forms
 
         private void btnSaveComment_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtBoxComment.Text))
+            {
+                MessageBox.Show("Metni Daxil Edin");
+                return;
+            }
+            btnClose.Visible = false;
             btnComent.Visible = true;
             txtBoxComment.Enabled = false;
             btnSaveComment.Visible = false;
+            
+            if (tableLayoutPanel.Height > (tblPnlComment.Height-3))
+                tableLayoutPanel.Height = tblPnlComment.Height;
         }
 
         private void btnDiamond3_Click(object sender, EventArgs e)
         {
-                btnDiamond1.BackColor = Color.Blue;
-                btnDiamond2.BackColor = Color.Blue;
-                btnDiamond3.BackColor = Color.Blue;
+            btnDiamond1.BackgroundImage = Resources.diamond1;   
+            btnDiamond2.BackgroundImage = Resources.diamond1; 
+            btnDiamond3.BackgroundImage = Resources.diamond1;
         }
 
         private void btnDiamond2_Click(object sender, EventArgs e)
         {
-            btnDiamond3.BackColor =Color.White;
-            btnDiamond2.BackColor = Color.Blue;
-            btnDiamond1.BackColor = Color.Blue;
+            btnDiamond1.BackgroundImage = Resources.diamond1;
+            btnDiamond2.BackgroundImage = Resources.diamond1;
+            btnDiamond3.BackgroundImage = Resources.diamond2;
         }
 
         private void btnDiamond1_Click(object sender, EventArgs e)
         {
-            btnDiamond3.BackColor = Color.White;
-            btnDiamond2.BackColor = Color.White;
-            btnDiamond1.BackColor = Color.Blue;
+            btnDiamond1.BackgroundImage = Resources.diamond1;
+            btnDiamond2.BackgroundImage = Resources.diamond2;
+            btnDiamond3.BackgroundImage = Resources.diamond2;
         }
+
+        private void btnDiamondCancel_Click(object sender, EventArgs e)
+        {
+            btnDiamond1.BackgroundImage = Resources.diamond2;
+            btnDiamond2.BackgroundImage = Resources.diamond2;
+            btnDiamond3.BackgroundImage = Resources.diamond2;
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            btnComent.Visible = true;
+            txtBoxComment.Visible = false;
+            txtBoxComment.Enabled = false;
+            btnSaveComment.Visible = false;
+            btnClose.Visible = false;
+            txtBoxComment.Clear();
+        }
+
+
     }
 }
